@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+#root {
+  width: 100%;
+}
+
+body,
+html {
+  padding: 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.46),
+      rgba(0, 0, 0, 0.46)), url('https://images.pexels.com/photos/8093367/pexels-photo-8093367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center center;
+}
+
+.weather {
+  width: max-content;
+  margin: 0 auto;
+  background: #ffffff8c;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  input {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 360px;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 19px;
+    background: #fff;
+    color: #000;
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+
+  .weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    margin-top: 20px;
+
+    img {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .notFound {
+      font-size: 22px;
+    }
+
+    .name {
+      font-size: 35px;
+    }
+
+    .current-data {
+      margin: 20px 0;
+      padding: 20px;
+      background: #0000007c;
+      border-radius: 10px;
+      font-size: 40px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .current-weather {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width:578px) {
+
+  .weather {
+    width: 100%;
+    padding: 30px 20px;
+
+    input {
+      width: 100%;
+    }
+
+    .App {
+      width: 100%;
+    }
+
+    .weather-item {
+      width: 100%;
+
+      .name,
+      .current-data,
+      .current-weather {
+        font-size: 30px;
+      }
+    }
+  }
+}
